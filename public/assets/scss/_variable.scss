@@ -1,0 +1,234 @@
+// Override variable value by copy and paste it into "_customize.scss" and change the value
+// Standard Bootstrap brackpoint 
+// sm:576px, md:768px, lg:992px, xl:1200px
+
+// mobile 
+$sm:576px;
+// Tablet 
+$md:768px;
+//desktop  
+$lg:992px;
+//large desktop 
+$xl:1200px;
+
+
+$path:"assets/";
+
+$brackpoint:(
+  sm:576,
+  md:768,
+  lg:992,
+  xl:1200
+);
+//enabling or disabling optional features
+$disable-rounded:            false !default;
+$disable-border:        false !default;
+$disable-boxshadow:        false !default;
+
+
+
+
+//Colors
+$colors: (
+    primary:(
+      base:#00CB54
+    ),
+    green:(
+      base:#02cc26
+    ),
+    red:(
+      base:#fd3635
+    ),
+    yellow:(
+      base:#faae2f
+    ),
+    cyan:(
+      base:#369bfd
+    ),
+    gray:(
+      base:#f0f0f2
+    ),
+    white:(
+      base:#fff
+    ),
+    black:(
+      base:#1e2022
+    )
+) !default;
+
+
+$theme-colors:(
+  primary: color(primary, base),
+  success:color(green, base),
+  info:color(cyan, base),
+  warning:color(yellow, base),
+  danger:color(red, base),
+  light: color(gray, base),
+  dark:color(black, base),
+) !default;
+
+
+$social-colors:(
+    facebook: #3a559d,
+    twitter: #56aced,
+    google-plus: #fe4031,
+    linkedin: #067bb5,
+    pinterest: #C92228, 
+    vimeo: #22b8ea,
+    youtube: #fe0302,
+    instagram: #3f719a,
+    dribbble: #e94c88,
+    behance: #0057ff,
+    skype: #01aef0,
+    github: #414141,
+    flickr: #ff0084,
+    tumblr: #32506d
+) !default;
+
+
+
+////// Typography
+ 
+$base-font-size:16 !default;
+$base-line-height: 1.76 !default; 
+$base-font-color: #606065 !default;
+$primary-font:'Work Sans', sans-serif !default; 
+$secondary-font:'Maven Pro', sans-serif !default;
+$heading-fonts:'Maven Pro', sans-serif !default;
+$button-font:'Poppins', sans-serif !default;
+$font-family-code:'source-code-pro';
+$link-color: inherit !default;
+$link-decoration: none !default;
+$link-hover-color: darken(color(primary, base), 5%) !default;
+$link-hover-decoration: underline !default;
+
+// Lead text
+$muted-text-color:color(gray, light);
+
+// font-weight
+$font-weight-thin:300;
+$font-weight-noraml:400;
+$font-weight-semi-bold:500;
+$font-weight-bold:600;
+$font-weight-extra-bold:900;
+
+
+// Heading 
+$h1-font-size:36 !default;
+$h2-font-size:30 !default;
+$h3-font-size:24 !default;
+$h4-font-size:22 !default;
+$h5-font-size:20 !default;
+$h6-font-size:18 !default;
+$heading-font-weight:500;
+$heading-color: #202428;
+$headings-line-height:1.30;
+$headings-letter-spacing: 0;
+
+
+
+//Border 
+$border-color:#ebedf2 !default;
+$color-border-dark:color(gray, dark) !default;
+$color-border-light:color(gray, light) !default;
+
+
+
+
+// Rounded 
+$rounded:4px; 
+
+
+
+//input 
+$input-font-size:$base-font-size;
+$input-lg-font-size:px-to-rem(18);
+$input-sm-font-size:px-to-rem(13);
+$input-bg:color(white, base);
+$input-solid-bg:#f7f7f8;
+$input-border-color:#e4e4e7;
+$input-border-radius:px-to-rem(4);
+$input-x-padding:px-to-rem(10);
+$input-y-padding:px-to-rem(20);
+$input-lg-x-padding:px-to-rem(11);
+$input-sm-x-padding:px-to-rem(7);
+
+// Input placeholder text
+$input-placeholder-color:#9192a3;
+$input-placeholder-opacity:1;
+
+
+// Input group
+
+
+
+// blockquote
+$blockquote-bg:get-color(gray, base); 
+$blockquote-font-size:1.25rem;
+$blockquote-font-color:$base-font-color;
+
+
+
+
+// Buttons
+$btn-border-width:        1px !default;
+$btn-font-family:         $secondary-font !default;
+$btn-border-color:        $base-font-color;
+$btn-border-radius:       4px;
+$btn-padding:             px-to-rem(10) px-to-rem(20);
+$btn-disabled-opacity:    .6 !default;
+$btn-font-weight:         500 !default;
+$btn-icon-font-size:      16px  !default;
+$btn-icon-font-size:      24px        !default;
+$btn-icon-size:           56px        !default;
+$btn-icon-size-mini:      36px        !default;
+$btn-icon-font-size-mini: 14px        !default;
+
+
+
+
+// Transition 
+$general-transition-time:  300ms             !default;
+$slow-transition-time:           370ms       !default;
+$dropdown-coordinates:      29px -50px       !default;
+$fast-transition-time:           150ms       !default;
+$select-coordinates:         50% -40px       !default;
+$transition-linear:         linear           !default;
+$transition-bezier:         cubic-bezier(0.34, 1.61, 0.7, 1) !default;
+$transition-ease:           ease 0s;
+
+
+
+
+// Boxshadow
+$box-shadow:1px 2px 3px rgba(0, 0, 0, 0.125);
+
+
+
+
+/// Icons box 
+$iconbox-xxs:28px;
+$iconbox-xs:35px;
+$iconbox-sm:40px;
+$iconbox:45px;
+$iconbox-md:50px;
+$iconbox-lg:60px;
+$iconbox-xl:70px;
+$iconbox-xxl:80px;
+$iconbox-xxxl:100px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

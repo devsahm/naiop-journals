@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /educati/assets/vendor/get-size</title>
+ </head>
+ <body>
+<h1>Index of /educati/assets/vendor/get-size</h1>
+  <table>
+   <tr><th valign="top">&nbsp;</th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="/educati/assets/vendor/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="bower.json">bower.json</a>             </td><td align="right">2018-01-29 14:19  </td><td align="right">612 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="get-size.js">get-size.js</a>            </td><td align="right">2018-01-29 14:19  </td><td align="right">5.2K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="getsize">getSize</h1>
+<p>Get the size of elements.</p>
+<pre><code class="lang-js">var size = getSize( elem );
+// elem can be an element
+var size = getSize( document.querySelector(&#39;#selector&#39;) )
+// elem can be a string, used as a query selector
+var size = getSize(&#39;#selector&#39;)
+</code></pre>
+<p>Returns an object with:  <code>width</code>, <code>height</code>, <code>innerWidth/Height</code>, <code>outerWidth/Height</code>, <code>paddingLeft/Top/Right/Bottom</code>, <code>marginLeft/Top/Right/Bottom</code>, <code>borderLeft/Top/Right/BottomWidth</code> and <code>isBorderBox</code>.</p>
+<p>Browser support: IE10+, Android 4.0+, iOS 5+, and modern browsers</p>
+<h2 id="install">Install</h2>
+<p>Install with <a href="http://bower.io">Bower</a>: <code>bower install get-size</code></p>
+<p>Install with npm: <code>npm install get-size</code></p>
+<h2 id="firefox-hidden-iframe-bug">Firefox hidden iframe bug</h2>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=548397">Firefox has an old bug</a> that occurs within iframes that are hidden with <code>display: none</code>. To resolve this, you can use alternate CSS to hide the iframe off-screen, with out <code>display: none</code>.</p>
+<pre><code class="lang-css">.hide-iframe {
+  visibility: hidden;
+  position: absolute;
+  left: -999em;
+}
+</code></pre>
+<h2 id="mit-license">MIT License</h2>
+<p>getSize is released under the <a href="http://desandro.mit-license.org/">MIT License</a>.</p>
+
+      </body>
+    </html></body></html>

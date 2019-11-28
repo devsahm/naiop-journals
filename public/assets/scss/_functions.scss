@@ -1,0 +1,23 @@
+@function get-social-color($key) {
+  @if map-has-key($social-colors, $key) {
+   @return map-get($social-colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $social-colors.";
+  @return null; 
+}
+
+@function color($color-name, $color-variant) {
+  @return map-get(map-get($colors, $color-name), $color-variant);
+}
+
+
+// Convert px value to rem
+@function px-to-rem($size) {
+  $remSize: $size / $base-font-size;
+  @return $remSize * 1rem;
+}
+// Convert px value to rem
+@function px-to-em($size) {
+  $emSize: $size / $base-font-size;
+  @return $emSize * 1em;
+}

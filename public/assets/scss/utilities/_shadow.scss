@@ -1,0 +1,280 @@
+// Shadows 
+// Default value for dropShadowPStoCSS mixins
+// $ps_red: 0,
+// $ps_green: 0,
+// $ps_blue: 0,
+// $ps_opacity: 75,
+// $ps_angle: 120,
+// $ps_distance: 5,
+// $ps_spread: 0,
+// $ps_size: 5
+
+.shadow-v1 {
+  @include dropShadowPStoCSS( 176, 177, 193, 10, 90, 5, 0, 5);
+}
+
+
+.shadow-v2 {
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-v3 {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+}
+
+.hover#{"\\:"}shadow-v3{
+  &:hover{
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+  }
+}
+
+
+
+
+.shadow-v4 {
+  @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 5, 0, 5);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 5, 0, 5);
+    }
+  }
+}
+
+
+.shadow-v5 {
+  @include dropShadowPStoCSS( 176, 177, 193, 10, 90, 0, 0, 10);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 10, 90, 0, 0, 10);
+    }
+  }
+}
+
+
+.shadow-v6 {
+  @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 0, 0, 15);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 0, 0, 15);
+    }
+  }
+}
+
+
+.shadow-v7 {
+  @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 5, 0, 5);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 5, 0, 5);
+    }
+  }
+}
+
+
+.shadow-v8 {
+  @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 5, 0, 10);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 5, 0, 10);
+    }
+  }
+}
+
+
+.shadow-v9 {
+  @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 5, 0, 20);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 5, 0, 20);
+    }
+  }
+}
+
+
+
+.shadow-v10 {
+  @include dropShadowPStoCSS( 176, 177, 193, 25, 90, 5, 0, 10);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 25, 90, 5, 0, 10);
+    }
+  }
+}
+
+
+.shadow-v11 {
+  @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 0, 0, 10);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 0, 0, 10);
+    }
+  }
+}
+
+.shadow-v12 {
+  @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 10, 0, 15);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 20, 90, 10, 0, 15);
+    }
+  }
+}
+
+
+.shadow-v13 {
+  @include dropShadowPStoCSS( 176, 177, 193, 25, 90, 10, 0, 10);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 25, 90, 10, 0, 10);
+    }
+  }
+}
+
+
+.shadow-v14 {
+  @include dropShadowPStoCSS( 176, 177, 193, 25, 90, 5, 0, 15);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 25, 90, 5, 0, 15);
+    }
+  }
+}
+
+
+
+.shadow-v15 {
+  @include dropShadowPStoCSS( 176, 177, 193, 10, 90, 10, 0, 30);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 10, 90, 10, 0, 30);
+    }
+  }
+}
+
+
+
+.shadow-v16 {
+  @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 10, 0, 25);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 10, 0, 25);
+    }
+  }
+}
+
+
+
+.shadow-v17 {
+  @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 0, 0, 30);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 0, 0, 30);
+    }
+  }
+}
+
+
+.shadow-v18 {
+  @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 5, 0, 30);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 5, 0, 30);
+    }
+  }
+}
+
+
+
+.shadow-v19 {
+  @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 10, 0, 30);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 10, 0, 30);
+    }
+  }
+}
+
+
+
+.shadow-v20 {
+  @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 0, 0, 50);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 0, 0, 50);
+    }
+  } 
+}
+
+
+.shadow-v21 {
+  @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 20, 0, 50);
+  &--onHover {
+    &:hover {
+      @include dropShadowPStoCSS( 176, 177, 193, 15, 90, 20, 0, 50);
+    }
+  }
+}
+
+
+
+.shadow-primary {
+  box-shadow: 0px 5px 10px 0px rgba( map-get($theme-colors, primary), .25);
+  &--onHover {
+    &:hover {
+      box-shadow: 0px 5px 10px 0px rgba( map-get($theme-colors, primary), .25);
+    }
+  }
+}
+
+
+.shadow-danger {
+  box-shadow: 0px 5px 10px 0px rgba( map-get($theme-colors, danger), .30);
+  &--onHover {
+    &:hover {
+      box-shadow: 0px 5px 10px 0px rgba( map-get($theme-colors, danger), .30);
+    }
+  }
+}
+
+
+.shadow-success {
+  box-shadow: 0px 5px 10px 0px rgba( map-get($theme-colors, success), .30);
+  &--onHover {
+    &:hover {
+      box-shadow: 0px 5px 10px 0px rgba( map-get($theme-colors, success), .30);
+    }
+  }
+}
+
+
+.shadow-info {
+  box-shadow: 0px 10px 10px 0px rgba( map-get($theme-colors, info), .20);
+  &--onHover {
+    &:hover {
+      box-shadow: 0px 10px 10px 0px rgba( map-get($theme-colors, info), .20);
+    }
+  }
+}
+
+
+.shadow-warning {
+  box-shadow: 0px 10px 10px 0px rgba( map-get($theme-colors, warning), .30);
+  &--onHover {
+    &:hover {
+      box-shadow: 0px 10px 10px 0px rgba( map-get($theme-colors, warning), .30);
+    }
+  }
+}
+
+
+.shadow-dark {
+  box-shadow: 0px 5px 20px 0px rgba( map-get($theme-colors, dark), .30);
+  &--onHover {
+    &:hover {
+      box-shadow: 0px 5px 20px 0px rgba( map-get($theme-colors, dark), .30);
+    }
+  }
+}
+
+
+

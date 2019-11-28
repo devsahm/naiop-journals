@@ -1,0 +1,62 @@
+.pagination{
+  .page-link {
+    color: inherit;
+  }
+  
+  .page-item.active .page-link {
+    background: map-get($theme-colors, primary);
+    border-color: map-get($theme-colors, primary);
+    color: #fff;
+    box-shadow: none;
+  }
+  
+  // Themeing 
+  // primary
+  &-primary {
+   .page-link {
+    &:hover,
+    &:focus,
+    &.active{
+      background: map-get($theme-colors, primary);
+      border-color: map-get($theme-colors, primary);
+      color: #fff;
+      box-shadow: none;
+    }
+   } 
+  }
+  
+  // Inverse 
+  &-inverse {
+    .page-item.active {
+      .page-link {
+        background-color: #fff !important;
+        border-color:#fff !important;
+        color: $base-font-color;
+      }
+    }
+    .page-link {
+      background-color: transparent !important;
+      border-color: rgba(#fff, .3) !important;
+      &:hover,
+      &:focus,
+      &.active{
+        background: #fff !important;
+        border-color:#fff !important;
+        color: $base-font-color;
+      }
+    }
+  }
+  
+  // Pill 
+  &-pill {
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: inline-flex;
+    border: 1px solid $border-color;
+    .page-link {
+      border: none;
+    }
+  }
+}

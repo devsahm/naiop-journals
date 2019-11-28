@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /educati/assets/vendor/jquery.countdown</title>
+ </head>
+ <body>
+<h1>Index of /educati/assets/vendor/jquery.countdown</h1>
+  <table>
+   <tr><th valign="top">&nbsp;</th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="/educati/assets/vendor/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="LICENSE.html">LICENSE.html</a>           </td><td align="right">2018-07-28 12:54  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="LICENSE.md">LICENSE.md</a>             </td><td align="right">2018-05-18 21:20  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="bower.json">bower.json</a>             </td><td align="right">2018-05-18 21:20  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="countdown.jquery.json">countdown.jquery.json</a>  </td><td align="right">2018-05-18 21:20  </td><td align="right">909 </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="dist/">dist/</a>                  </td><td align="right">2018-07-29 14:24  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top">&nbsp;</td><td><a href="karma.conf.js">karma.conf.js</a>          </td><td align="right">2018-05-18 21:20  </td><td align="right">688 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="the-final-countdown-build-status"><a href="http://hilios.github.io/jQuery.countdown/">The Final Countdown</a> <a href="https://travis-ci.org/hilios/jQuery.countdown"><img src="https://travis-ci.org/hilios/jQuery.countdown.svg" alt="Build Status"></a></h1>
+<h4 id="a-simple-and-html-agnostic-date-countdown-plugin-for-jquery">A simple and html agnostic date countdown plugin for jQuery</h4>
+<p>To get started, check-it out: <a href="http://hilios.github.io/jQuery.countdown/">http://hilios.github.io/jQuery.countdown/</a></p>
+<p>The ultimate countdown plugin designed to fit in any coupon, auction site or product launch. Read our <a href="http://hilios.github.io/jQuery.countdown/documentation.html">Documentation</a> and follow our <a href="http://hilios.github.io/jQuery.countdown/examples.html">Examples</a> to see what suits your particular needs.</p>
+<h4 id="download"><a href="https://github.com/hilios/jQuery.countdown/releases/download/2.1.0/jquery.countdown-2.1.0.zip">Download</a></h4>
+<p><a href="https://github.com/hilios/jQuery.countdown/releases/download/2.1.0/jquery.countdown-2.1.0.zip">Click here to download the latest version</a></p>
+<p>If you want to clone the repo always use the files under <a href="https://github.com/hilios/jQuery.countdown/tree/master/dist">dist</a> folder, they are optimized for production and development.</p>
+<h4 id="install-via-bower">Install via Bower</h4>
+<pre><code>bower install jquery.countdown
+</code></pre><p>Add a <code>script</code> to your html:</p>
+<pre><code class="lang-html">&lt;script src=&quot;/bower_components/jquery.countdown/dist/jquery.countdown.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="getting-started">Getting started</h2>
+<pre><code class="lang-html">&lt;div id=&quot;getting-started&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $(&#39;#getting-started&#39;).countdown(&#39;2015/01/01&#39;, function(event) {
+    $(this).html(event.strftime(&#39;%w weeks %d days %H:%M:%S&#39;));
+  });
+&lt;/script&gt;
+</code></pre>
+<h3 id="requirements">Requirements</h3>
+<p>Since version 2.0.0 we only support jQuery above <strong>1.7</strong> (including <strong>2.x</strong> and <strong>3.x</strong>). For legacy <strong>1.6</strong> support please use the version <a href="https://github.com/hilios/jQuery.countdown/releases/download/1.0.2/jquery.countdown-1.0.2.zip">1.0.2</a>.</p>
+<h3 id="documentation"><a href="http://hilios.github.io/jQuery.countdown/documentation.html">Documentation</a></h3>
+<p>Our documentation is powered by <a href="http://jekyllrb.com/">Jekyll</a> (see <code>gh-page</code> branch) and hosted in GitHub Pages at <a href="http://hilios.github.io/jQuery.countdown/documentation.html">http://hilios.github.io/jQuery.countdown/</a>.</p>
+<h3 id="examples"><a href="http://hilios.github.io/jQuery.countdown/examples.html">Examples</a></h3>
+<p>There are few ways to get started, from the most simple example to advanced, we support many different countdown styles, see wich one fits your scenario, and if anyone doesn&#39;t it&#39;s a good starting point to customize your output.</p>
+<ul>
+<li><a href="http://hilios.github.io/jQuery.countdown/examples/basic-coupon-site.html">Basic coupon site with format N days hr:min:sec</a></li>
+<li><a href="http://hilios.github.io/jQuery.countdown/examples/advanced-coupon-site.html">Advance coupon with conditionals and pluralization, format N weeks N days hr:min:sec</a></li>
+<li><a href="http://hilios.github.io/jQuery.countdown/examples/website-launch.html">Product launch in... (callback style)</a></li>
+<li><a href="http://hilios.github.io/jQuery.countdown/examples/legacy-style.html">New year&#39;s eve (legacy style)</a></li>
+<li><a href="http://hilios.github.io/jQuery.countdown/examples/multiple-instances.html">Multiple instances on the same page</a></li>
+<li><a href="http://hilios.github.io/jQuery.countdown/examples/show-total-hours.html">Calculate the countdown total hours</a></li>
+</ul>
+<h2 id="release-notes"><a href="https://github.com/hilios/jQuery.countdown/releases">Release notes</a></h2>
+<p>Current version is <strong>2.1.0</strong>, to follow our change log please visit the <a href="https://github.com/hilios/jQuery.countdown/releases">release notes</a>.</p>
+<h4 id="what-s-new-in-2-1-0-">What&#39;s new in 2.1.0?</h4>
+<ul>
+<li>Add proper offset for days left to a month and to a week;</li>
+<li>Fix bower amd install;</li>
+</ul>
+<h4 id="what-s-new-in-2-0-5-">What&#39;s new in 2.0.5?</h4>
+<ul>
+<li>Allow precision controls through an options object;</li>
+<li>Allow to continue after countdown finishes;</li>
+<li>Don&#39;t dispatch events when nothing changes;</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>The Final Countdown uses <strong>Grunt</strong> and <strong>Bower</strong> with convenient methods for developing the plugin. It&#39;s how we compile our code and run tests. To get started install <a href="http://nodejs.org/">NodeJS</a>, <a href="http://bower.io/">Bower</a>, and then run some Grunt/Bower commands.</p>
+<pre><code class="lang-shell">bower install
+npm install
+grunt test  # Lint code and run test suite
+grunt build # Generate the release files (dev, min and zip)
+grunt       # Watch for updates than test and build
+</code></pre>
+<p>This plugin is tested with <a href="http://qunitjs.com/">QUnit</a>, under jQuery 1.7 up to 2.1, Bootstrap 3.0 and RequireJS.</p>
+<p>The functional tests made against:</p>
+<ul>
+<li>Chrome &gt;= 12</li>
+<li>Safari &gt;= 5</li>
+<li>Firefox &gt;= 5.0</li>
+<li>IE 7/8/9</li>
+</ul>
+<p>Code coverage:</p>
+<pre><code class="lang-sh">---------------|----------|----------|----------|----------|----------------|
+File           |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+---------------|----------|----------|----------|----------|----------------|
+ src/          |    98.39 |    90.32 |      100 |    98.39 |                |
+  countdown.js |    98.39 |    90.32 |      100 |    98.39 |          6,269 |
+---------------|----------|----------|----------|----------|----------------|
+All files      |    98.39 |    90.32 |      100 |    98.39 |                |
+---------------|----------|----------|----------|----------|----------------|
+</code></pre>
+<h3 id="contributors">Contributors</h3>
+<p>Thanks for bug reporting and fixes:</p>
+<ul>
+<li>Daniel Leavitt (@dleavitt)</li>
+<li>Fagner Brack (@FagnerMartinsBrack)</li>
+<li>Matthew Sigley (@msigley)</li>
+<li>Roman Shterenzon (@romanbsd)</li>
+<li>Marios (@assiotis)</li>
+<li>Zane Yao (@yaoazhen)</li>
+<li>Ricardo Calvo (@ricardocalvo)</li>
+</ul>
+<h3 id="license">License</h3>
+<p>Copyright (c) 2011-2015 Edson Hilios. This is a free software is licensed under the MIT License.</p>
+<ul>
+<li><a href="http://edson.hilios.com.br">Edson Hilios</a>. Mail me: edson (at) hilios (dot) com (dot) br</li>
+</ul>
+
+      </body>
+    </html></body></html>

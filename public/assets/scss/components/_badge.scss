@@ -1,0 +1,47 @@
+.badge {
+  padding: px-to-rem(5) px-to-rem(7); 
+  font-weight: 500;
+  &-primary {
+    background:  map-get($theme-colors, primary) ; 
+  }
+  &-success {
+    background: map-get($theme-colors, success) ;
+  }
+  &-warning {
+    background: map-get($theme-colors, warning) ;
+    color: #fff;
+  }
+  &-danger {
+    background: map-get($theme-colors, danger) ;
+  }
+  &-info {
+    background: map-get($theme-colors, info) ;
+  }
+  &-dark {
+    background: map-get($theme-colors, dark) ;
+  }
+
+} 
+
+.badge-blurb {
+  position: relative;
+  display: inline-block;
+  .badge {
+    position: absolute;
+    width: px-to-rem(22);
+    height: px-to-rem(22);
+    font-weight: normal;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+  }
+  &.badge-blurb-rounded{
+    .badge {
+      top: -4px;
+      right: -6px;
+    }
+  }
+}

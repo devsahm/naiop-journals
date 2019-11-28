@@ -1,0 +1,27 @@
+.link{  
+  &-primary {
+    color: color(primary, base) !important;
+    &:hover {
+      opacity: .90;
+    }
+  }
+  
+  &-white {
+    color: #fff !important;
+    &:hover {
+      opacity: .90;
+    }
+    &-udl {
+      color: #fff;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
+    &-dark {
+      color: map-get($theme-colors, dark) !important;
+      &:hover {
+        opacity: .90;
+      }
+  }
+}

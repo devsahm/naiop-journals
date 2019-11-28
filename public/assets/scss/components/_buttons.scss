@@ -1,0 +1,330 @@
+.btn{
+  padding:$btn-padding;
+  transition: .3s;
+  cursor: default !important;
+  font-weight: $btn-font-weight;
+  font-family: $btn-font-family;
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+a.btn, 
+button.btn {
+  cursor: pointer !important;
+}
+
+// Default btn mixin 
+
+@mixin btn($color, $hoverTextColor:false, $hoverBg:false, $hoverBorderColor:false){
+  background: $color  !important;
+  border-color: $color !important;  
+  &:hover, 
+  &:active,
+  &:focus,
+  &.active,
+  .show > .dropdown-toggle,
+  .show > .dropdown-toggle.dropdown-toggle-split{
+    @if($hoverBg){
+      background: $hoverBg !important;
+    }@else {
+      background: darken($color, 10%) !important;
+    }
+    @if($hoverBorderColor){
+      border-color: $hoverBorderColor !important;
+    }@else {
+      border-color: darken($color, 10%) !important; 
+    }
+    @if($hoverTextColor){
+      color: $hoverTextColor !important;
+    }
+  }
+}
+
+
+//  btn outline mixin 
+@mixin btn-outline($color, $hoverTextColor:false){
+  background-color: transparent;
+  border-color: $color;
+  color: $color;
+  &:hover,
+  &:active,
+  &.active,
+  .show > .dropdown-toggle{
+    background-color: $color !important;
+    color: #fff !important;
+    border-color: $color !important;
+  }
+}
+
+
+@mixin btn-opacity($color, $hoverTextColor:false){
+  background: rgba($color, .15);
+  color: $color;
+  &:hover{
+    background: $color;
+    @if $hoverTextColor{
+      color: $hoverTextColor;
+    }@else {
+      color: #fff ;
+    }
+  }
+}
+/// Button Primary 
+.btn-primary {
+  @include btn(map-get($theme-colors, primary));
+  color: #fff !important;
+}
+
+.btn-outline-primary {
+ @include btn-outline(map-get($theme-colors, primary));
+}
+
+.btn-opacity-primary{
+  @include btn-opacity(map-get($theme-colors, primary));
+}
+
+
+/// Button Secondary 
+.btn-secondary {
+  @include btn(#606065);
+}
+
+.btn-outline-secondary {
+  @include btn-outline(#606065);
+}
+
+.btn-opacity-secondary{
+  @include btn-opacity(#606065);
+}
+
+
+
+/// Button  Success 
+.btn-success {
+  @include btn(map-get($theme-colors, success));
+}
+
+.btn-outline-success {
+  @include btn-outline(map-get($theme-colors, success));
+}
+.btn-opacity-success{
+  @include btn-opacity(map-get($theme-colors, success));
+}
+
+/// Button  Info 
+.btn-info {
+  @include btn(map-get($theme-colors, info));
+}
+
+.btn-outline-info {
+  @include btn-outline(map-get($theme-colors, info));
+}
+.btn-opacity-info{
+  @include btn-opacity(map-get($theme-colors, info));
+}
+
+/// Button  Warning 
+.btn-warning {
+  color: #fff;
+  @include btn(map-get($theme-colors, warning), #fff);
+}
+.btn-outline-warning {
+  color: #fff;
+  @include btn-outline(map-get($theme-colors, warning), #fff);
+}
+.btn-opacity-warning{
+  @include btn-opacity(map-get($theme-colors, warning));
+}
+
+
+/// Button  Danger 
+.btn-danger {
+  @include btn(map-get($theme-colors, danger));
+}
+
+.btn-outline-danger {
+  @include btn-outline(map-get($theme-colors, danger));
+}
+.btn-opacity-danger{
+  @include btn-opacity(map-get($theme-colors, danger));
+}
+
+/// Button Light 
+.btn-outline-light {
+  background-color: transparent;
+  border-color: #e4e4e7;
+  color: $base-font-color;
+  &:hover,
+  &:active {
+    background-color: #e4e4e7;
+    border-color: #e4e4e7; 
+  }
+}
+
+/// Button Dark 
+.btn-dark {
+  @include btn(map-get($theme-colors, dark));
+}
+
+.btn-outline-dark {
+  @include btn-outline(map-get($theme-colors, dark));
+}
+
+
+
+/// Button White 
+.btn-white {
+  @include btn(#fff, #fff, map-get($theme-colors, primary), map-get($theme-colors, primary));
+  color: $base-font-color;
+}
+
+.btn-outline-white {
+ background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  &:hover{
+    background: #fff;
+    color: #000;
+  }
+}
+.btn-outline-white-hover{
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+  &:hover{
+    background-color: transparent;
+    color: #fff;
+  }
+}
+
+
+
+// Link Button
+.btn-link {
+  color: map-get($theme-colors, primary);
+  &:hover {
+    color: darken(map-get($theme-colors, primary), 10%) !important ;
+  }
+}
+
+
+
+
+/// Group Buttons
+
+.btn-group {
+  .btn-light {
+    background:transparent;
+    border-color: #e4e4e7;
+    &:hover,
+    &:active,
+    &:focus{
+      background: #e4e4e7;
+    }
+  }
+  
+  &-pill {
+    .btn:first-child {
+      border-radius: 3rem 0 0 3rem;
+    }
+    .btn:last-child {
+      border-radius: 0 3rem 3rem 0;
+    }
+    .btn-group {
+      .btn {
+        border-radius: 0 10rem 10rem 0;
+      }
+    }
+  }
+  
+  &-square {
+    .btn {
+      border-radius: 0;
+    }
+  }
+}
+
+
+// Buttons Size adjust with bootstrap 
+.btn-xs {
+  padding: px-to-rem(4) px-to-rem(7);
+  font-size: 11px;
+}
+.btn-sm {
+  padding: px-to-rem(5) px-to-rem(10);
+}
+.btn-lg {
+  font-size: px-to-rem(16);
+  padding: px-to-rem(13) px-to-rem(25);
+}
+.btn-xl {  
+  font-size: px-to-rem(18);
+  padding: px-to-rem(15) px-to-rem(30);
+}
+
+
+
+// Button Disable 
+.btn-disabled {
+  opacity: .65;
+  cursor: inherit !important;
+}
+
+
+// Pill Buttons 
+.btn-pill {
+  border-radius: 30px;
+}
+
+
+
+
+// Buttons with icon 
+
+.btn-icon {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  align-items: center;
+}
+
+// Social Buttons 
+@each $name, $color in $social-colors { 
+ .btn-#{$name}{ 
+   color: #fff !important;
+    background-color: $color;
+     &:hover{
+       background-color: darken($color, 10%);
+     }   
+  }  
+  .btn-outline-#{$name} {
+    background-color: transparent;
+    border-color: $color;
+    color: $color;
+    &:hover {
+      background: $color;
+      border-color: $color;
+      color: #fff;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

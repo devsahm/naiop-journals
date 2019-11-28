@@ -1,0 +1,145 @@
+
+body {
+  font-family: $primary-font;
+  color: $base-font-color;
+  font-size: px-to-rem($base-font-size);
+}
+
+a {
+  color: inherit;
+  text-decoration: $link-decoration;
+  transition: .3s;
+}
+a:hover,
+a:active,
+a.active,
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: $link-hover-color;
+}
+p {
+  line-height: $base-line-height;
+}
+img {
+  max-width: 100%;
+  transition: .3s;
+}
+
+input:not([type="submit"]):not([type="checkbox"]), 
+textarea,
+select{
+  font-family: $primary-font;
+  transition: all .3s;
+  &:focus{
+    outline: none;
+  }
+}
+
+button,
+.btn{
+  font-family:$btn-font-family;
+  &:focus{
+    outline: none; 
+    box-shadow:none;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6, 
+.h6 {
+  font-family: $heading-fonts;
+  font-weight: $heading-font-weight;
+  color: $heading-color;
+  letter-spacing: $headings-letter-spacing;
+  line-height: $headings-line-height;
+  display: block;
+}
+
+h1,
+.h1 {
+  font-size: px-to-rem($h1-font-size);
+}
+
+h2,
+.h2 {
+  font-size: px-to-rem($h2-font-size);
+}
+
+h3,
+.h3 {
+  font-size: px-to-rem($h3-font-size);
+}
+
+h4,
+.h4 {
+  font-size: px-to-rem($h4-font-size);
+}
+
+h5,
+.h5 {
+  font-size: px-to-rem($h5-font-size);
+}
+
+h6,
+.h6 {
+  font-size: px-to-rem($h6-font-size);
+}
+.text-white {
+  h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6, 
+  .h6 {
+    color: #fff;
+  }
+}
+hr {
+  width: 100%;
+  border-color: $border-color;
+}
+
+blockquote {
+  padding: 30px;
+  font-size: 1.23rem;
+  border-left: 4px solid color(primary, base);
+  color: #202428;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-style: italic;
+  > cite {
+    color: #9192a3;
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+
+.lead{
+  font-weight: normal;
+}
+
+sup.sup{
+  top: -1.3em; 
+}
+
+
+
