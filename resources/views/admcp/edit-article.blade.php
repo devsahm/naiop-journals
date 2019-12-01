@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- <meta name="description" content="Jumbo - A fully responsive, HTML5 based admin theme">
     <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, jQuery, web design, CSS3, sass"> -->
-    <title>Nigerian Association of Clinical Psychologists | Admin</title>
+    <title>NAIOP | Admin</title>
     <!-- Site favicon -->
     <link rel='shortcut icon' type='image/x-icon' href='/adminassets//adminassets/images/favicon.ico' />
     <!-- /site favicon -->

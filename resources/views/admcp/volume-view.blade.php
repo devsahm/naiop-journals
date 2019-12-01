@@ -113,7 +113,7 @@
                                                 <td>  
                                                     <button type="button" class="btn btn-info"><i class="fa fa-eye-slash"></i><a href="/issue/{{ $issue->id }}" style="color: white; text-decoration: none;">View Articles</a></button>
                                                 </td>
-                                             <!--    <td>
+                                                <!--<td>
                                                   <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i><a href="/issue/{{ $issue->id }}" style="color: white; text-decoration: none;">Delete Issue</a></button>
                                                 </td> -->
                                                  <?php $counter++; ?>
@@ -148,8 +148,8 @@
             <!-- Footer -->
             <footer class="gx-footer">
                 <div class="d-flex flex-row justify-content-between">
-                    <p> Copyright Company Name © 2018</p>
-                    <a href="https://themeforest.net/item/jumbo-admin-responsive-admin-dashboard-template/21368029" target="_blank" class="btn-link text-uppercase">Buy Now</a>
+                    <p>NAIOP {{now()->year}}</p>
+                    
                 </div>
             </footer>
             <!-- /footer -->
