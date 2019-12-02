@@ -70,7 +70,7 @@
             <!--gx-wrapper-->
             <div class="gx-wrapper">
                 <div class="page-heading d-sm-flex justify-content-sm-between align-items-sm-center">
-                    <h2 class="title mb-3 mb-sm-0">Editorial Board Upload</h2>
+                    <h2 class="title mb-3 mb-sm-0">Volume {{$issue->volume_id}} No. {{$issue->issue}} {{$issue->volume_year}}</h2>
                     <nav class="mb-0 breadcrumb">
                         <a href="/admin" class="breadcrumb-item">Dashboard</a>
         
@@ -94,31 +94,16 @@
                                 @include('errors')
                                  @include('customerror')
                                 @include('success')
-                               <form class="form" method="post" action="/board">
+                               <form class="form" method="post" action="/admin/editorial-board/add/{{$issue->id}}">
                             
                                 @csrf
+                                @method('PATCH')
                             
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-sm-3 control-label">Select Publication</label>
-                                        <div class="col-md-10 col-sm-9">
-                                            <select class="custom-select" name="issue_id" required>
-                                                <option value="0">Select publication</option>
-                                                @foreach($issues as $issue)
-                                                <option value="{{$issue->id}} {{$issue->volume_id}} {{$issue->issue}}">Volume {{$issue->volume_id}} No.{{ $issue->issue}}</option>
-                                     
-                                               @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-
-
-                                        
-
-                                    <div class="line-dashed"></div>
+                
                                      <div class="form-group row">
-                                        <label class="col-md-2 col-sm-3 control-label">Editorial Board</label>
+                                        <label class="col-md-2 col-sm-3 control-label">Journal Editorial Board</label>
                                         <div class="col-md-10 col-sm-9">
-                                          <textarea id="summernote" name="board" required>{{old('board')}}</textarea>
+                                          <textarea id="summernote" name="editorial_board" required>{{$issue->editorial_board}}</textarea>
                                         </div>
                                     </div>          
 
@@ -128,11 +113,11 @@
                                     <div class="form-group row">
                                         <div class="col-md-10 col-sm-9 offset-md-2 offset-sm-3">
                                           
-                                            <button type="submit" class="btn btn-primary">Upload</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </form>
-                                <p style="margin-left: 200px;">Click <a href="/admin/board-view">HERE</a> to view and edit uploaded Editorial Board</p>
+                               
                             </div>
                         </div>
                     </div>

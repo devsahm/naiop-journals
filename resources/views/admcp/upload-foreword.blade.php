@@ -70,12 +70,12 @@
             <!--gx-wrapper-->
             <div class="gx-wrapper">
                 <div class="page-heading d-sm-flex justify-content-sm-between align-items-sm-center">
-                    <h2 class="title mb-3 mb-sm-0">Upload Foreword</h2>
+                    <h2 class="title mb-3 mb-sm-0">Volume {{$issue->volume_id}} No. {{$issue->issue}} {{$issue->volume_year}}</h2>
                     <nav class="mb-0 breadcrumb">
                         <a href="/admin" class="breadcrumb-item">Dashboard</a>
         
                        
-                        <span class="active breadcrumb-item">Upload Foreword</span>
+                        <span class="active breadcrumb-item">Foreword</span>
                     </nav>
                 </div>
               
@@ -94,33 +94,16 @@
                                 @include('errors')
                                  @include('customerror')
                                 @include('success')
-                               <form class="form" method="post" action="/foreword">
+                               <form class="form" method="post" action="/admin/foreword/add/{{$issue->id}}">
                             
                                 @csrf
-                                
-
-                              
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-sm-3 control-label">Select Publication</label>
-                                        <div class="col-md-10 col-sm-9">
-                                            <select class="custom-select" name="issue_id" required>
-                                                <option value="0">Select publication</option>
-                                                @foreach($issues as $issue)
-                                                <option value="{{$issue->id}} {{$issue->volume_id}} {{$issue->issue}}">Volume {{$issue->volume_id}} No.{{ $issue->issue}}</option>
-                                     
-                                               @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-
-
-                                        
-
-                                    <div class="line-dashed"></div>
+                                @method('PATCH')
+                            
+                
                                      <div class="form-group row">
                                         <label class="col-md-2 col-sm-3 control-label">Journal Foreword</label>
                                         <div class="col-md-10 col-sm-9">
-                                          <textarea id="summernote" name="foreword" required>{{old('foreword')}}</textarea>
+                                          <textarea id="summernote" name="foreword" required>{{$issue->foreword}}</textarea>
                                         </div>
                                     </div>          
 
@@ -130,11 +113,11 @@
                                     <div class="form-group row">
                                         <div class="col-md-10 col-sm-9 offset-md-2 offset-sm-3">
                                           
-                                            <button type="submit" class="btn btn-primary">Upload</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </form>
-                                <p style="margin-left: 200px;">Click <a href="/admin/foreword-view">HERE</a> to view and edit uploaded foreword</p>
+                               
                             </div>
                         </div>
                     </div>

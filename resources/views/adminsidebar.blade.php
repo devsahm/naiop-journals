@@ -56,7 +56,7 @@
                             <li><a href="/admin/create-volume"><span class="nav-text">Create Volume</span></a></li>
                             <li><a href="/admin/manual-publication"><span class="nav-text">Create Publication </span></a></li>
                             <li><a href="/admin/publication-view"><span class="nav-text">View Publication </span></a></li>
-                            <li><a href="/admin/article-published"><span class="nav-text">Published Articles </span></a></li>
+                           <!--  <li><a href="/admin/article-published"><span class="nav-text">Published Articles </span></a></li> -->
                         </ul>
                     </li>
 

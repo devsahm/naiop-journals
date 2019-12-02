@@ -70,7 +70,7 @@
             <!--gx-wrapper-->
             <div class="gx-wrapper">
                 <div class="page-heading d-sm-flex justify-content-sm-between align-items-sm-center">
-                    <h2 class="title mb-3 mb-sm-0">Upload Editors Note</h2>
+                    <h2 class="title mb-3 mb-sm-0">Volume {{$issue->volume_id}} No. {{$issue->issue}} {{$issue->volume_year}}</h2>
                     <nav class="mb-0 breadcrumb">
                         <a href="/admin" class="breadcrumb-item">Dashboard</a>
         
@@ -94,33 +94,16 @@
                                 @include('errors')
                                  @include('customerror')
                                 @include('success')
-                               <form class="form" method="post" action="/editor">
+                               <form class="form" method="post" action="/admin/editors-note/add/{{$issue->id}}">
                             
                                 @csrf
-                               
-
-                              
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-sm-3 control-label">Select Publication</label>
-                                        <div class="col-md-10 col-sm-9">
-                                            <select class="custom-select" name="issue_id" required>
-                                                <option value="0">Select publication</option>
-                                                @foreach($issues as $issue)
-                                                <option value="{{$issue->id}} {{$issue->volume_id}} {{$issue->issue}}">Volume {{$issue->volume_id}} No.{{ $issue->issue}}</option>
-                                     
-                                               @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-
-
-                                        
-
-                                    <div class="line-dashed"></div>
+                                @method('PATCH')
+                            
+                
                                      <div class="form-group row">
-                                        <label class="col-md-2 col-sm-3 control-label">Editors Note</label>
+                                        <label class="col-md-2 col-sm-3 control-label">Journal Editors Note</label>
                                         <div class="col-md-10 col-sm-9">
-                                          <textarea id="summernote" name="editor" required>{{old('editor')}}</textarea>
+                                          <textarea id="summernote" name="editors_note" required>{{$issue->editors_note}}</textarea>
                                         </div>
                                     </div>          
 
@@ -130,11 +113,11 @@
                                     <div class="form-group row">
                                         <div class="col-md-10 col-sm-9 offset-md-2 offset-sm-3">
                                           
-                                            <button type="submit" class="btn btn-primary">Upload</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </form>
-                                <p style="margin-left: 200px;">Click <a href="/admin/editor-view">HERE</a> to view and edit uploaded editors Note</p>
+                               
                             </div>
                         </div>
                     </div>

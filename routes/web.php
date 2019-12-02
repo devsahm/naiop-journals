@@ -62,16 +62,23 @@ Route::get('/admin/article-downloads-registration', 'AdminController@downloadreg
 Route::delete('/downloadsuser/{id}', 'AdminController@downloadsuser');
 Route::get('/admin/security', 'AdminController@security');
 Route::patch('/admin/passwordupdate/{id}', 'AdminController@updatepassword');
-Route::get('/admin/foreword', 'AdminController@foreword');
+Route::get('/admin/foreword', 'AdminController@showforeword');
 Route::get('/admin/editors-note', 'AdminController@editors');
 Route::get('/admin/foreword-view', 'AdminController@viewforeword');
 Route::get('/admin/editor-view', 'AdminController@vieweditor');
 Route::get('/admin/board-view', 'AdminController@viewboard');
 Route::get('/admin/editorial-board', 'AdminController@board');
-
+Route::get('/admin/foreword/action/{id}', 'AdminController@uploadforeword');
+Route::get('/admin/editors-note/action/{id}', 'AdminController@uploadeditor');
+Route::get('/admin/editorial-board/action/{id}', 'AdminController@uploadboard');
+Route::patch('/admin/foreword/add/{id}', 'AdminController@saveforeword');
+Route::patch('/admin/editors-note/add/{id}', 'AdminController@saveeditor');
+Route::patch('/admin/editorial-board/add/{id}', 'AdminController@saveboard');
 
 
 Route::post('/manual', 'AdminController@storearticle');
+
+
 // Route::patch('/admin/message-control/{id}', 'AdminController@messagecontrol'); not working(Read Message)
 
 

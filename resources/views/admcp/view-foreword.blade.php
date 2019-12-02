@@ -79,7 +79,7 @@
             <div class="gx-wrapper">
                 <div class="animated slideInUpTiny animation-duration-3">
                     <div class="page-heading d-sm-flex justify-content-sm-between align-items-sm-center">
-                        <h2 class="title mb-3 mb-sm-0">Uploaded Foreword</h2>
+                        <h2 class="title mb-3 mb-sm-0">Publication List</h2>
                         <nav class="mb-0 breadcrumb">
                             <a href="/admin" class="breadcrumb-item">Dashboard</a>
                             
@@ -98,38 +98,24 @@
                                             <tbody>
                                             <tr>
                                                <th>S/N</th>
-                                              <th>Date Uploaded</th>
-                                              <th>Time Uploaded</th>
                                               <th>Publication</th>
-                                              <th>Edit Forward</th>
-                                              <th>Delete</th>
+                                              <th>Add/Edit Forward</th>
                                             </tr>
                                              <?php $counter=1; ?>
-                                            @if($forewords->count())
-                                            @foreach($forewords as $foreword)
+                                            @if($issues->count())
+                                            @foreach($issues as $issue)
                                             <tr>
                                                 
                                                <td><?php echo $counter; ?></td>
-                                                <td>{{ date('d M Y', strtotime($foreword->created_at)) }}</td>
-                                                <td> {{ date('h:i a', strtotime($foreword->created_at)) }}</td>
+                                            
                                                 
-                                                <td>Volume {{$foreword->volume_number}} No.{{$foreword->issue_number}} </td>
+                                                <td>Volume {{$issue->volume_id}} No.{{$issue->issue}} </td>
                                                 <td>
                                                   <div>
-                                                    <a href="/foreword/{{ $foreword->id }}/edit" class="btn btn-info" style="margin-left: 20px" ><i class="fa fa-eye-slash"></i>Edit</a>
+                                                    <a href="/admin/foreword/action/{{$issue->id}}" class="btn btn-info" style="margin-left: 20px" ><i class="fa fa-eye-slash"></i>Add/Update</a>
                                                 </div>
                                                 </td>
 
-                                        
-
-                                        
-                                                <td class="text-center">
-                                                <form method="post" action="/foreword/{{ $foreword->id }}">
-                                                 @method('DELETE')
-                                                 @csrf
-                                                <button type="Submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')"><i class="fa fa-trash"></i>Delete</button>
-                                                </form>
-                                                </td>
                                                  <?php $counter++; ?>
                                              
                                             </tr>
@@ -149,7 +135,7 @@
                                             </tbody>
                                         </table>
                                  <ul class="pagination"  style="margin: 10px">
-                                 {{ $forewords->links() }}
+                                 {{ $issues->links() }}
                                  </ul>
                                     </div>
                                 </div>

@@ -79,11 +79,11 @@
             <div class="gx-wrapper">
                 <div class="animated slideInUpTiny animation-duration-3">
                     <div class="page-heading d-sm-flex justify-content-sm-between align-items-sm-center">
-                        <h2 class="title mb-3 mb-sm-0">Uploaded Editors Note</h2>
+                        <h2 class="title mb-3 mb-sm-0">Publication- Editors Note</h2>
                         <nav class="mb-0 breadcrumb">
                             <a href="/admin" class="breadcrumb-item">Dashboard</a>
                             
-                            <span class="active breadcrumb-item">Uploaded Editors Note</span>
+                            <span class="active breadcrumb-item">Editors Note</span>
                         </nav>
                     </div>
              
@@ -98,38 +98,24 @@
                                             <tbody>
                                             <tr>
                                                <th>S/N</th>
-                                              <th>Date Uploaded</th>
-                                              <th>Time Uploaded</th>
                                               <th>Publication</th>
-                                              <th>Edit Note</th>
-                                              <th>Delete</th>
+                                              <th>Add/Edit Editors Note</th>
                                             </tr>
                                              <?php $counter=1; ?>
-                                            @if($editors->count())
-                                            @foreach($editors as $editor)
+                                            @if($issues->count())
+                                            @foreach($issues as $issue)
                                             <tr>
                                                 
                                                <td><?php echo $counter; ?></td>
-                                                <td>{{ date('d M Y', strtotime( $editor->created_at)) }}</td>
-                                                <td> {{ date('h:i a', strtotime( $editor->created_at)) }}</td>
+                                            
                                                 
-                                                <td>Volume {{$editor->volume_number}} No.{{ $editor->issue_number}} </td>
+                                                <td>Volume {{$issue->volume_id}} No.{{$issue->issue}} </td>
                                                 <td>
                                                   <div>
-                                                    <a href="/editor/{{ $editor->id }}/edit" class="btn btn-info" style="margin-left: 20px" ><i class="fa fa-eye-slash"></i>Edit</a>
+                                                    <a href="/admin/editors-note/action/{{$issue->id}}" class="btn btn-info" style="margin-left: 20px" ><i class="fa fa-eye"></i>Add/Update</a>
                                                 </div>
                                                 </td>
 
-                                        
-
-                                        
-                                                <td class="text-center">
-                                                <form method="post" action="/editor/{{ $editor->id }}">
-                                                 @method('DELETE')
-                                                 @csrf
-                                                <button type="Submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')"><i class="fa fa-trash"></i>Delete</button>
-                                                </form>
-                                                </td>
                                                  <?php $counter++; ?>
                                              
                                             </tr>
@@ -149,7 +135,7 @@
                                             </tbody>
                                         </table>
                                  <ul class="pagination"  style="margin: 10px">
-                                 {{ $editors->links() }}
+                                 {{ $issues->links() }}
                                  </ul>
                                     </div>
                                 </div>

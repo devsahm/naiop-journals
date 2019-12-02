@@ -51,6 +51,99 @@ class AdminController extends Controller
     }
 
 
+    public function showforeword()
+    {
+     
+      $issues=Issue::paginate(10);
+        return view('admcp.view-foreword', compact('issues'));
+    }
+
+    public function uploadforeword($id)
+    {
+     
+      $issue=Issue::findorFail($id);
+      return view('admcp.upload-foreword', compact('issue'));
+    }
+
+
+     public function uploadeditor($id)
+    {
+     
+      $issue=Issue::findorFail($id);
+      return view('admcp.upload-editor', compact('issue'));
+    }
+
+
+
+     public function uploadboard($id)
+    {
+     
+      $issue=Issue::findorFail($id);
+      return view('admcp.upload-board', compact('issue'));
+    }
+
+
+     public function saveforeword($id)
+    {
+     
+     $issue=Issue::findorFail($id);
+
+     if($issue->foreword ==null){
+      $issue->foreword=request('foreword');
+      $issue->save();
+     return back()->with('success', 'You have successfully added foreword for the specified publication');
+    }else{
+      // dd('ecwdw');
+ $issue->foreword=request('foreword');
+      $issue->save();
+     return back()->with('success', 'You have successfully updated foreword for the specified publication');
+    }
+
+    }
+
+     public function saveeditor($id)
+    {
+     
+     $issue=Issue::findorFail($id);
+
+     if($issue->editors_note ==null){
+      $issue->editors_note=request('editors_note');
+      $issue->save();
+     return back()->with('success', 'You have successfully added Editors Note for this publication');
+    }else{
+      // dd('ecwdw');
+ $issue->editors_note=request('editors_note');
+      $issue->save();
+     return back()->with('success', 'You have successfully updated Editors Note for this publication');
+    }
+
+    }
+
+
+        public function saveboard($id)
+    {
+     
+     $issue=Issue::findorFail($id);
+
+     if($issue->editorial_board ==null){
+      $issue->editorial_board=request('editorial_board');
+      $issue->save();
+     return back()->with('success', 'You have successfully added Editorial Board Note for this publication');
+    }else{
+    
+ $issue->editorial_board=request('editorial_board');
+      $issue->save();
+     return back()->with('success', 'You have successfully updated Editorial Board for this publication');
+    }
+
+    }
+
+
+
+     
+     
+
+
      public function volumecreate()
     {
 
@@ -67,16 +160,16 @@ class AdminController extends Controller
 
    public function editors()
     {
-      $issues=Issue::all();
+      $issues=Issue::paginate(10);
 
-        return view('admcp.upload-editor', compact('issues'));
+        return view('admcp.view-editor', compact('issues'));
     }
 
     public function board()
     {
-      $issues=Issue::all();
+      $issues=Issue::paginate(10);
 
-        return view('admcp.upload-board', compact('issues'));
+        return view('admcp.view-board', compact('issues'));
     }
 
      public function viewboard()
@@ -163,7 +256,7 @@ class AdminController extends Controller
     }
 
 
-         public function contact()
+    public function contact()
     {
     	  $contacts=Contact::where('removed', '0')->paginate(4);
         return view('admcp.contact', compact('contacts'));
