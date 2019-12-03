@@ -57,8 +57,8 @@ $volumes=Volume::all();
 
       public function editor($id)
     {
-  $editor=Editor::findorFail($id);
-      return view('naiop.editors-note', compact('editor'));
+  $issue=Issue::findorFail($id);
+      return view('naiop.editors-note', compact('issue'));
     }
 
 
@@ -88,8 +88,8 @@ $volumes=Volume::all();
 
       public function pubinfo($id)
      {
-      $board=Board::findorFail($id);
-    return view('naiop.information-journal', compact('board'));
+      $issue=Issue::findorFail($id);
+    return view('naiop.information-journal', compact('issue'));
     }
 
 
@@ -128,12 +128,8 @@ $volumes=Volume::all();
 
         public function foreword($id)
     {
-       $issue=Issue::where('id','=', $id);
-       $forewords=Foreword::where('issue_id', '=', $id)->get();
-   $boards=Board::where('issue_id', '=', $id)->get();
-   $editors=Editor::where('issue_id', '=', $id)->get();
-      $info=Foreword::findorFail($id);
-        return view('naiop.foreword', compact('info', 'forewords', 'boards', 'editors', 'issue'));
+       $issue=Issue::findorFail($id);
+        return view('naiop.foreword', compact('issue'));
     }
 
     public function viewarticle($id)

@@ -91,12 +91,12 @@ class AdminController extends Controller
      if($issue->foreword ==null){
       $issue->foreword=request('foreword');
       $issue->save();
-     return back()->with('success', 'You have successfully added foreword for the specified publication');
+     return back()->with('success', 'You have successfully added foreword for this publication');
     }else{
       // dd('ecwdw');
  $issue->foreword=request('foreword');
       $issue->save();
-     return back()->with('success', 'You have successfully updated foreword for the specified publication');
+     return back()->with('success', 'You have successfully updated foreword for this publication');
     }
 
     }

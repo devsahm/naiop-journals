@@ -88,31 +88,21 @@
         <h2>Editors Note</h2>
      
         <p class="mb-5">
-        Welcome to the maiden issue of the Journal of Industrial and Organisational Behavior in
-Africa (JIOBA). The journey towards the publication of the journal started during the Annual
-Conference of the Nigerian Psychological Association (NPA) held on November 2016 at the
-Nnamdi Azikiwe University, Awka. During the conference the Industrial and Organisational
-Psychology division of NPA held a meeting of the division and resolved to have an active
-umbrella association for all industrial and organisational psychologists in Nigeria. In the
-meeting a new association named Nigerian Association of Industrial and Organisational
-Psychologists (NAIOP) was formally established. The excitement that surrounded the
-formation of the new association led to the hosting of the NAIOP annual conferences at the
-University of Ibadan in 2017 and Benue State University, Makurdi in 2018. The success
-recorded from these two conferences led to the desire to establish a flagship journal for the
-NAIOP.
+       <!--  {{$issue->editors_note}} -->
         </p>
-
-             <p class="mb-5">
-       We are happy to celebrate the birth of the Journal of Industrial and Organisational Behavior
+<!-- 
+<p class="mb-5">
+We are happy to celebrate the birth of the Journal of Industrial and Organisational Behavior
 in Africa. It is a dream come true. The JIOBA though is in its infancy stage, our desire is to
 attract and publish high quality articles from leading scholars in the field of industrial and
 organisational psychology in Africa and from other parts of the world. We have deliberate
 plan to increase the quality of articles in the volumes by recruiting distinguished scholars in
 reputable institutions across the world to serve as reviewers and editors of the journal. We are
 optimistic about the contributions of the journal to the global discussions on industrial and
-organisational psychology.
-        </p>
-        <p class="mb-5">Deserving special thanks for their contributions to the success of the birth of this journal and
+organisational psychology.</p>
+
+
+<p class="mb-5">Deserving special thanks for their contributions to the success of the birth of this journal and
 this maiden issue are the executive council and members of the NAIOP for approving that
 JIOBA be established as the main platform for communicating issues relating to industrial
 and organisational psychology in Nigeria. I wish also to thank the editorial team for ensuring
@@ -126,7 +116,7 @@ and practice of industrial and organisational psychology in Africa and beyond.</
 
 <p><b>Ike E. Onyishi, PhD</b><br>
 Editor,<br>
-Journal of Industrial and Organisational Behaviour in Africa</p>
+Journal of Industrial and Organisational Behaviour in Africa</p> -->
 
 
 

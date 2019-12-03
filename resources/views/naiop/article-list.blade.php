@@ -91,16 +91,16 @@
          <h4 class="card-header border-bottom mb-0 h6">Journal Quick Links</h4>
          <ul class="card-body list-unstyled mb-0">
            <li class="mb-2"><a href="/journal">Journal</a></li>
-           @foreach($forewords as $foreword)
-          <li class="mb-2"><a href="/foreword/{{$foreword->id}}">Foreword</a></li>
-          @endforeach
-            @foreach($editors as $editor)
-      <li class="mb-2"><a href="/editors-note/{{$editor->id}}">Editors Note</a></li>
-          @endforeach
+         
+          <li class="mb-2"><a href="/foreword/{{$issue->id}}">Foreword</a></li>
+ 
+            
+      <li class="mb-2"><a href="/editors-note/{{$issue->id}}">Editors Note</a></li>
+          
 
-           @foreach($boards as $board)
-      <li class="mb-2"><a href="/publication-information/{{$board->id}}">Editorial Board</a></li>
-          @endforeach
+          
+      <li class="mb-2"><a href="/editorial-board/{{$issue->id}}">Editorial Board</a></li>
+          
           
          </ul>
        </div>

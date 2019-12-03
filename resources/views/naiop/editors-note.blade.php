@@ -85,17 +85,17 @@
      <aside class="col-lg-3 order-2 order-lg-1">
        <div class="card marginTop-30 shadow-v1">
         
-       <img src="/coverimage/cover.jpg" alt="cover" style="height: auto; width: 100%">
+       <img src="/coverimage/{{$issue->cover}}" alt="cover" style="height: auto; width: 100%">
        </div>
-      <!--  <div class="card marginTop-30 shadow-v1">
+       <div class="card marginTop-30 shadow-v1">
          <h4 class="card-header border-bottom mb-0 h6">Journal Quick Links</h4>
          <ul class="card-body list-unstyled mb-0">
            <li class="mb-2"><a href="/journal">Journal</a></li>
-          <li class="mb-2"><a href="/foreword">Foreword</a></li>
-           <li class="mb-2"><a href="/editors-note" style="color: green;">Editors Note</a></li>
-          <li class="mb-2"><a href="/publication-information">Article Editors</a></li> 
+          <li class="mb-2"><a href="/foreword/{{$issue->id}}">Foreword</a></li>
+           <li class="mb-2"><a href="/editors-note/{{$issue->id}}" style="color: green;">Editors Note</a></li>
+          <li class="mb-2"><a href="/editorial-board/{{$issue->id}}">Article Editors</a></li> 
          </ul>
-       </div> -->
+       </div>
 
         <div class="card marginTop-30 shadow-v1">
          <h4 class="card-header border-bottom mb-0 h6">Note to Contributors</h4>
@@ -111,7 +111,7 @@
    
      <h3>Editors Note</h3>
  <p class="mb-5" style="text-align: justify;">
-{!! $editor->editors_note !!}
+{!! $issue->editors_note !!}
         </p>
 
            

@@ -65,7 +65,7 @@
         <li class="breadcrumb-item">Foreword</li>
       </ol>
       <h2 class="h1">
-        Foreword
+       Foreword
       </h2>
      
      </div>
@@ -81,21 +81,19 @@
 <section class="padding-y-80">
   <div class="container">
    <div class="row align-items-start">
-    
      <aside class="col-lg-3 order-2 order-lg-1">
        <div class="card marginTop-30 shadow-v1">
-        
-       <img src="/coverimage/cover.jpg" alt="cover" style="height: auto; width: 100%">
+       <img src="/coverimage/{{$issue->cover}}" alt="cover" style="height: auto; width: 100%">
        </div>
-<!--        <div class="card marginTop-30 shadow-v1">
+       <div class="card marginTop-30 shadow-v1">
          <h4 class="card-header border-bottom mb-0 h6">Journal Quick Links</h4>
          <ul class="card-body list-unstyled mb-0">
-          <li class="mb-2"><a href="/journal">Journal</a></li>
-          <li class="mb-2"><a href="/foreword" style="color: green;">Foreword</a></li>
-           <li class="mb-2"><a href="/editors-note">Editors Note</a></li>
-          <li class="mb-2"><a href="/publication-information">Article Editors</a></li> 
+           <li class="mb-2"><a href="/journal">Journal</a></li>
+          <li class="mb-2"><a href="/foreword/{{$issue->id}}" style="color: green">Foreword</a></li>
+           <li class="mb-2"><a href="/editors-note/{{$issue->id}}">Editors Note</a></li>
+          <li class="mb-2"><a href="/editorial_board/{{$issue->id}}">Article Editors</a></li> 
          </ul>
-       </div> -->
+       </div>
 
         <div class="card marginTop-30 shadow-v1">
          <h4 class="card-header border-bottom mb-0 h6">Note to Contributors</h4>
@@ -107,25 +105,14 @@
      
      </aside> <!-- END col-lg-3 -->
      
-  <div class="col-lg-9 order-1 order-lg-2">
- 
+  <div class="col-lg-9 order-1 order-lg-2"> 
    
-     
-   
-    
-     
-   
-     
- <h3>Foreword</h3>
-     
-     <div style="text-align:justify;" > 
-        <p class="mb-5">
+     <h3>Foreword</h3>
+ <p class="mb-5" style="text-align: justify;">
+{!! $issue->foreword !!}
+        </p>
 
-          {!! $info->foreword !!}
-   
-</p>
-
-</div> 
+           
   
    
  </div> <!-- END col-lg-9 -->

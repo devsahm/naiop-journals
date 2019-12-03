@@ -62,10 +62,10 @@
       <ol class="breadcrumb breadcrumb-double-angle bg-transparent p-0">  
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="/journal">Journals</a></li>
-        <li class="breadcrumb-item">Editors</li>
+        <li class="breadcrumb-item">Article Editors</li>
       </ol>
       <h2 class="h1">
-        Editors
+       Article Editors
       </h2>
      
      </div>
@@ -81,22 +81,19 @@
 <section class="padding-y-80">
   <div class="container">
    <div class="row align-items-start">
-    
      <aside class="col-lg-3 order-2 order-lg-1">
        <div class="card marginTop-30 shadow-v1">
-        
-       <img src="/coverimage/cover.jpg" alt="cover" style="height: auto; width: 100%">
+       <img src="/coverimage/{{$issue->cover}}" alt="cover" style="height: auto; width: 100%">
        </div>
-    <!--    <div class="card marginTop-30 shadow-v1">
+       <div class="card marginTop-30 shadow-v1">
          <h4 class="card-header border-bottom mb-0 h6">Journal Quick Links</h4>
          <ul class="card-body list-unstyled mb-0">
            <li class="mb-2"><a href="/journal">Journal</a></li>
-            <li class="mb-2"><a href="/foreword">Foreword</a></li>
-           <li class="mb-2"><a href="/editors-note">Editors Note</a></li>
-          <li class="mb-2"><a href="/publication-information" style="color: green;">Article Editors</a></li>
-         
+          <li class="mb-2"><a href="/foreword/{{$issue->id}}" >Foreword</a></li>
+           <li class="mb-2"><a href="/editors-note/{{$issue->id}}">Editors Note</a></li>
+          <li class="mb-2"><a href="/editorial_board/{{$issue->id}}" style="color: green">Article Editors</a></li> 
          </ul>
-       </div> -->
+       </div>
 
         <div class="card marginTop-30 shadow-v1">
          <h4 class="card-header border-bottom mb-0 h6">Note to Contributors</h4>
@@ -107,22 +104,15 @@
        </div>
      
      </aside> <!-- END col-lg-3 -->
+     
+  <div class="col-lg-9 order-1 order-lg-2"> 
+   
+     <h3>Article Editors</h3>
+ <p class="mb-5" style="text-align: justify;">
+{!! $issue->editorial_board !!}
+        </p>
 
-       
-     
-     
-  <div class="col-lg-9 order-1 order-lg-2">
- 
-   
-     
-   
-    
-     
-   
-     
- <p style="text-align: justify;">
-   {!! $board->editorial_board !!}
- </p>
+           
   
    
  </div> <!-- END col-lg-9 -->

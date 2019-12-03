@@ -22,7 +22,7 @@ Route::get('/archives', 'PagesController@archives');
 Route::get('/membership', 'PagesController@membership');
 Route::get('/executives', 'PagesController@executives');
 Route::get('/editors-note/{id}', 'PagesController@editor');
-Route::get('/publication-information/{id}', 'PagesController@pubinfo');
+Route::get('/editorial-board/{id}', 'PagesController@pubinfo');
 Route::get('/note-to-contributors', 'PagesController@contributors');
 Route::get('/foreword/{id}', 'PagesController@foreword');
 // Route::get('/publication/article-detials/{id}', 'PagesController@viewarticle');
