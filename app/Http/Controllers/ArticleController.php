@@ -142,7 +142,7 @@ return redirect('/writer/submit-article');
         $file = $file->move(('uploads'), $name);
         $validation['uploadone']= $name;
         };
-
+        $validation['slug']=str_slug($request->title);
          $article->update($validation);
 
      session()->flash('success', 'Article was successfully updated');

@@ -391,6 +391,7 @@ return back();
     };
 
     $validation['admin']= '1';
+    $validation['slug']=str_slug($request->title);
     Article::create($validation);
        
         return redirect('/admin/manual-publication')->with('successfast', 'Article successfully uploaded');
