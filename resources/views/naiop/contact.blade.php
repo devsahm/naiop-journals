@@ -133,7 +133,7 @@
         @csrf
         
           <p class="lead mt-2">
-           Nigeria Association of Industrial and Organisational Psychologists. Contact us to for more enquiries
+           Nigerian Association of Industrial and Organisational Psychologists. Contact us to for more enquiries
           </p>
           @include('errors')
          @include('success')

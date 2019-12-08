@@ -88,7 +88,7 @@
        <div class="card marginTop-30 shadow-v1">
          <h4 class="card-header border-bottom mb-0 h6">Journal Quick Links</h4>
          <ul class="card-body list-unstyled mb-0">
-           <li class="mb-2"><a href="/journal">Journal</a></li>
+          <li class="mb-2"><a href="/journal/volume-{{$issue->volume_id}}-issue-{{$issue->issue}}">Table of Contents</a></li>
           <li class="mb-2"><a href="/foreword/{{$issue->id}}" style="color: green">Foreword</a></li>
            <li class="mb-2"><a href="/editors-note/{{$issue->id}}">Editors Note</a></li>
           <li class="mb-2"><a href="/editorial_board/{{$issue->id}}">Article Editors</a></li> 
