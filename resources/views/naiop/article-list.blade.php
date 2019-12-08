@@ -125,7 +125,7 @@
     <div class="list-card align-items-center shadow-v1 marginTop-30">
      
       <div>
-      <p><a href="/journal/issue/article-detials/{{ $article->id }}" style="text-decoration: underline; font-size: 15px; color: green;" >{{ $article->title }}</a> {{ $article->pagenumber }}
+      <p><a href="/journal/article/{{$article->slug}}" style="text-decoration: underline; font-size: 15px; color: green;" >{{ $article->title }}</a> {{ $article->pagenumber }}
       @if($article->price == 0)
       
       @else

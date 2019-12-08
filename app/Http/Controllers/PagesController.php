@@ -132,24 +132,31 @@ $volumes=Volume::all();
         return view('naiop.foreword', compact('issue'));
     }
 
-    public function viewarticle($id)
+    public function viewarticle($slug)
     {
 
     $volumes=Volume::all();
     $ArticleCount=Article::where('published', '1')->count();
-    $article=Article::findorFail($id);
+    $article_row=Article::where('slug', $slug)->first();
 
+    if($slug){
+      $article_id=$article_row->id;
+      $article=Article::findorFail($article_id);
+          return view('naiop.article-content', compact(['article', 'volumes', 'ArticleCount']));
+     }else{
+      abort(404);
+     }
 
-    return view('naiop.article-content', compact(['article', 'volumes', 'ArticleCount']));
+   
 
     }
 
-      public function downloadarticle($id)
+      public function downloadarticle($slug)
     {
 
     $volumes=Volume::all();
     $ArticleCount=Article::where('published', '1')->count();
-    $article=Article::findorFail($id);
+    $article=Article::where('slug', $slug)->first();
 
 
     return view('naiop.article-download', compact(['article', 'volumes', 'ArticleCount']));
@@ -188,16 +195,17 @@ $volumes=Volume::all();
    //  }
 
 
-     public function articlelist($id)
+     public function articlelist($volume_id, $issue)
     {
 
       
 
-   $issue=Issue::findorFail($id);
-   $forewords=Foreword::where('issue_id', '=', $id)->get();
-   $boards=Board::where('issue_id', '=', $id)->get();
-   $editors=Editor::where('issue_id', '=', $id)->get();
-    return view('naiop.article-list', compact(['issue', 'forewords', 'boards', 'editors']));
+   $issue=Issue::where('volume_id', $volume_id)
+   ->where('issue', $issue)->first();
+   // $forewords=Foreword::where('issue_id', '=', $id)->get();
+   // $boards=Board::where('issue_id', '=', $id)->get();
+   // $editors=Editor::where('issue_id', '=', $id)->get();
+    return view('naiop.article-list', compact(['issue']));
 
     }
 

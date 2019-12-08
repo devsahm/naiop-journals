@@ -113,7 +113,9 @@
           <div class="col-md-9">
             <span> Volume {{ $issue->volume_id }} No. {{ $issue->issue}}</span>
             <h5>{{ $issue->journal }}</h5>
-           <p><a href="/journal/issue/article-list/{{$issue->id }}" style="color: green;">View Issue Table of Contents</a></p>
+       <!--     <p><a href="/journal/issue/article-list/{{$issue->id }}" style="color: green;">View Issue Table of Contents</a></p> -->
+
+       <p><a href="/journal/volume-{{$issue->volume_id}}-issue-{{$issue->issue}}" style="color: green;">View Issue Table of Contents</a></p>
           </div>
         </div>
 

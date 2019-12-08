@@ -21,7 +21,7 @@ class WriterController extends Controller
         public function submitarticle()
     {
 
-        return view('naiop.submit-article');
+    return view('naiop.submit-article');
     }
 
 

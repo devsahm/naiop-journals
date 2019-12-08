@@ -121,7 +121,7 @@
          <p style="text-align:justify;">
            {{ $article->abstract }}
          </p>
-   <a href="/journal/download/article/{{ $article->id}}" class="btn btn-primary">ACCESS ARTICLE</a>
+   <a href="/journal/article/download/{{ $article->slug}}" class="btn btn-primary">ACCESS ARTICLE</a>
         <!--  <a href="/uploads/{{ $article->uploadone}}" class="btn btn-primary">Download Article</a> -->
          </div>
        </div> <!-- END card-body-->
@@ -174,8 +174,8 @@
 
    
       
-<section class="padding-y-100 bg-light-v2">  
-</section> <!-- END section-->
+<!-- <section class="padding-y-100 bg-light-v2">  
+</section> --> <!-- END section-->
 
 
 @include('footer')

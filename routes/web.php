@@ -32,9 +32,9 @@ Route::get('issue/article-list/{id}', 'PagesController@articlelist');
 Route::get('/search', 'PagesController@search');
 Route::get('/home-search', 'PagesController@homesearch');
 Route::get('/journal', 'PagesController@journal');
-Route::get('/journal/issue/article-list/{id}', 'PagesController@articlelist');
-Route::get('/journal/issue/article-detials/{id}', 'PagesController@viewarticle');
-Route::get('/journal/download/article/{id}', 'PagesController@downloadarticle');
+Route::get('/journal/volume-{volume_id}-issue-{issue}', 'PagesController@articlelist');
+Route::get('/journal/article/{slug}', 'PagesController@viewarticle');
+Route::get('/journal/article/download/{slug}', 'PagesController@downloadarticle');
 Route::get('/about/objectives', 'PagesController@objectives');
 
 

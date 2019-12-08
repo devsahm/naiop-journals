@@ -25,7 +25,7 @@ class RedirectIfAuthenticated
                 return redirect('/');
             }
             if (Auth::guard($guard)->check()) {
-                return redirect('/');
+                return redirect()->intended();
             }
 
             return $next($request);
