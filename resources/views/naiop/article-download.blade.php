@@ -129,7 +129,7 @@
            Keywords: {{ $article->keywords }}
          </h6>
   
-         <a href="/uploads/{{ $article->uploadone}}" class="btn btn-primary">Download Article</a>
+         <a href="/uploads/{{ $article->uploadone}}" class="btn btn-primary" download>Download Article</a>
          </div>
 
           

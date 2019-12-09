@@ -91,7 +91,7 @@
           <li class="mb-2"><a href="/journal/volume-{{$issue->volume_id}}-issue-{{$issue->issue}}">Table of Contents</a></li>
           <li class="mb-2"><a href="/foreword/{{$issue->id}}" style="color: green">Foreword</a></li>
            <li class="mb-2"><a href="/editors-note/{{$issue->id}}">Editors Note</a></li>
-          <li class="mb-2"><a href="/editorial_board/{{$issue->id}}">Article Editors</a></li> 
+          <li class="mb-2"><a href="/editorial_board/{{$issue->id}}">Editorial Board</a></li> 
          </ul>
        </div>
 

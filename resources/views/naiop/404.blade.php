@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     
     <!-- Title-->
-    <title>NAIOP| 404</title>
+    <title>NAIOP | 404</title>
     
     <!-- SEO Meta-->
     <meta name="description" content="Education theme by EchoTheme">
@@ -45,10 +45,10 @@
         <div class="col-12 text-center">
             <h1 class="text-primary display-1">404</h1>
             <h2 class="mb-4">
-                Sorry! The Page Not Found <i class="fas fa-frown text-warning" aria-hidden="true"></i>
+                Sorry! Page Not Found <i class="fas fa-frown text-warning" aria-hidden="true"></i>
             </h2>
             <p>
-                The Link You Folowed Does Not Exist.
+                The Link You Followed Does Not Exist.
             </p>
             <a href="/" class="btn btn-rounded btn-primary mt-5">Back To Home</a>
         </div>

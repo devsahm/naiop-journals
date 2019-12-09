@@ -65,7 +65,7 @@
         <li class="breadcrumb-item">Article Editors</li>
       </ol>
       <h2 class="h1">
-       Article Editors
+       Editorial Board
       </h2>
      
      </div>
@@ -91,7 +91,7 @@
         <li class="mb-2"><a href="/journal/volume-{{$issue->volume_id}}-issue-{{$issue->issue}}">Table of Contents</a></li>
           <li class="mb-2"><a href="/foreword/{{$issue->id}}" >Foreword</a></li>
            <li class="mb-2"><a href="/editors-note/{{$issue->id}}">Editors Note</a></li>
-          <li class="mb-2"><a href="/editorial_board/{{$issue->id}}" style="color: green">Article Editors</a></li> 
+          <li class="mb-2"><a href="/editorial_board/{{$issue->id}}" style="color: green">Editorial Board</a></li> 
          </ul>
        </div>
 
@@ -107,7 +107,7 @@
      
   <div class="col-lg-9 order-1 order-lg-2"> 
    
-     <h3>Article Editors</h3>
+     <h3>Editorial Board</h3>
  <p class="mb-5" style="text-align: justify;">
 {!! $issue->editorial_board !!}
         </p>
