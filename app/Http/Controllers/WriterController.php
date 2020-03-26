@@ -44,7 +44,7 @@ class WriterController extends Controller
     $writer=Writer::findorFail($id);
 if(request('password') == request('passwordconfirm')){
 
-if (Hash::check(request('oldpassword'),  $writer->password)) {
+if (Hash::check(request('oldpassword'),  $writer->password)){
 
     $writer->password=Hash::make(request('password'));
     $writer->save();
